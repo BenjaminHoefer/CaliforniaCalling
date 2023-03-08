@@ -46,10 +46,24 @@
 * Variables
 */
 
+/*
+* Colors
+ */
+
 $dark : #000;
 $bright: #fff;
 
-/* Mixins */
+/*
+* Font sizes
+*/
+
+$text: clamp(.75rem, .5rem + 2vw, 1rem);
+$headline: clamp(1rem, 2rem + 5vw, 6rem);
+$headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
+
+/*
+* Mixins
+*/
 
 @mixin flex-column {
     display: flex;
@@ -70,12 +84,19 @@ $bright: #fff;
 .headline {
     font-family: "Lora";
     font-weight: 700;
+    font-size: $headline;
+}
+
+.headline--small {
+    font-size: $headline--small;
+    max-width: 18ch;
 }
 
 .text {
     font-family: "Work Sans";
     font-weight: 400;
     margin: 0 .5rem;
+    font-size: $text;
 }
 
 .text--white {
@@ -87,8 +108,9 @@ $bright: #fff;
 }
 
 /*
-TODO: Just temporary! I still have to change the image style
+TODO: Just temporary! I still have to change the image style, this might only be useful for small devices so for media queries
 */
+
 .img {
     max-inline-size: 100%;
     block-size: auto;
@@ -117,18 +139,12 @@ TODO: Just temporary! I still have to change the image style
     margin-inline: 3rem;
 }
 
-.header__text {
-    font-size: 0.75rem;
+.header__text--center {
     text-align: center;
 }
 
-.headline {
-    font-size: clamp(1rem, 1rem + 5vw, 6rem);
-}
-
-.headline--small {
-    font-size: clamp(2rem, 2rem + 1.75vw, 6rem);
-    max-width: 18ch;
+.header__text--center:nth-of-type(2) {
+    width: 25ch;
 }
 
 .welcome {
@@ -136,9 +152,9 @@ TODO: Just temporary! I still have to change the image style
 }
 
 .welcome__flexbox {
+    @include flex-column;
     width: 100%;
     padding: 1.5rem 2rem;
-    display: flex;
     justify-content: space-between;
 }
 
@@ -164,9 +180,50 @@ TODO: Just temporary! I still have to change the image style
     }
 }
 
+.header__intro {
+    padding-bottom: 4rem;
+}
+
+.intro {
+    display: grid;
+}
+
+.intro__headline {
+    position: relative;
+    z-index: 1;
+}
+
+.intro__map {
+    margin: -3rem 2rem 2rem 1rem;
+    width: clamp(10rem, 10rem + 30vw, 100rem);
+    justify-self: end;
+}
+
+.intro__info {
+    align-self: end;
+    margin: -17rem 2rem 0 1rem;
+}
+
+.intro__numbers {
+    margin-block-end: 3rem;
+}
+
 /*
 * Main
 */
+.main__grid {
+    display: grid;
+    gap: 0.25rem;
+    margin: .5rem;
+}
+
+.main__article {
+    margin-block-start: -5rem;
+    margin-block-end: 2rem;
+    margin-inline: 1rem;
+    padding: 1rem;
+    background: rgba($bright, 0.9);
+}
 
 .section__golden-bear {
     background-color: $dark;
@@ -188,28 +245,11 @@ TODO: Just temporary! I still have to change the image style
 * Media queries
 */
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
     html {
         font-size: 20px;
     }
-}
-
-@media only screen and (max-width: 400px) {
-    .img {
-        max-inline-size: 100%;
-        block-size: auto;
-    }
-}
-
-
-@media only screen and (max-width: 600px) {
     .welcome__flexbox {
-        @include flex-column;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    html {
-        font-size: 25px;
+        flex-direction: row;
     }
 }
