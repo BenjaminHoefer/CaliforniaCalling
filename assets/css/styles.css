@@ -1,41 +1,191 @@
-/* General */
-
+/*
+* Import fonts
+*/
 /* work-sans-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/work-sans-v18-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/work-sans-v18-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/work-sans-v18-latin-regular.woff2") format("woff2"), url("../fonts/work-sans-v18-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-  /* work-sans-900 - latin */
+/* work-sans-900 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/work-sans-v18-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/work-sans-v18-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/work-sans-v18-latin-900.woff2") format("woff2"), url("../fonts/work-sans-v18-latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 /* lora-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/lora-v32-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/lora-v32-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lora-v32-latin-regular.woff2") format("woff2"), url("../fonts/lora-v32-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lora-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lora-v32-latin-700.woff2") format("woff2"), url("../fonts/lora-v32-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/*
+* Variables
+*/
+/* Mixins */
+/*
+* General
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  /* lora-700 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/lora-v32-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/lora-v32-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+.headline {
+  font-family: "Lora";
+  font-weight: 700;
 }
+
+.text {
+  font-family: "Work Sans";
+  font-weight: 400;
+  margin: 0 0.5rem;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--white-border {
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+/*
+TODO: Just temporary! I still have to change the image style
+*/
+.img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/*
+* Header
+*/
+.header {
+  background-color: #000;
+}
+
+.header__line {
+  display: block;
+  width: 1px;
+  height: 7.5rem;
+  margin: 0 auto;
+}
+
+.header__welcome {
+  margin: 3rem 0;
+}
+
+.header__headline {
+  margin-inline: 3rem;
+}
+
+.header__text {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.headline {
+  font-size: clamp(1rem, 1rem + 5vw, 6rem);
+}
+
+.headline--small {
+  font-size: clamp(2rem, 2rem + 1.75vw, 6rem);
+  max-width: 18ch;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome__flexbox {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome__logo {
+  margin-top: 2rem;
+  width: clamp(3rem, 3rem + 5vw, 4rem);
+}
+
+.welcome__btn {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: clamp(0.5rem, 0.5rem + 0.5vw, 2rem);
+  padding: 0.5rem 2rem;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*
+* Main
+*/
+.section__golden-bear {
+  background-color: #000;
+}
+
+.section__poppy-bear {
+  background-color: #fff;
+}
+
+/*
+* Footer
+*/
+.footer {
+  background-color: #000;
+}
+
+/*
+* Media queries
+*/
+@media only screen and (min-width: 400px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .img {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .welcome__flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
