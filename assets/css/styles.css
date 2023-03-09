@@ -61,6 +61,7 @@
 }
 
 .headline--small {
+  margin-inline-start: 0.5rem;
   font-size: clamp(2rem, 2rem + 1.75vw, 6rem);
   max-width: 18ch;
 }
@@ -70,6 +71,7 @@
   font-weight: 400;
   margin: 0 0.5rem;
   font-size: clamp(0.75rem, 0.5rem + 2vw, 1rem);
+  line-height: 1.5;
 }
 
 .text--white {
@@ -80,9 +82,10 @@
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-/*
-TODO: Just temporary! I still have to change the image style, this might only be useful for small devices so for media queries
-*/
+.text--grid {
+  padding-inline-start: 1.25rem;
+}
+
 .img {
   max-inline-size: 100%;
   block-size: auto;
@@ -103,7 +106,7 @@ TODO: Just temporary! I still have to change the image style, this might only be
 }
 
 .header__welcome {
-  margin: 3rem 0;
+  margin-block: 3rem;
 }
 
 .header__headline {
@@ -175,7 +178,7 @@ TODO: Just temporary! I still have to change the image style, this might only be
 
 .intro__info {
   align-self: end;
-  margin: -17rem 2rem 0 1rem;
+  margin: -17rem 2rem 0 4rem;
 }
 
 .intro__numbers {
@@ -192,9 +195,7 @@ TODO: Just temporary! I still have to change the image style, this might only be
 }
 
 .main__article {
-  margin-block-start: -5rem;
-  margin-block-end: 2rem;
-  margin-inline: 1rem;
+  margin: -5rem 1rem 2.6rem 1rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.9);
 }
@@ -207,6 +208,20 @@ TODO: Just temporary! I still have to change the image style, this might only be
   background-color: #fff;
 }
 
+.main__section {
+  padding-block-start: 5rem;
+  margin-block-end: 3rem;
+  margin-inline: 1rem;
+}
+
+.bear__headline {
+  margin-block-end: 1rem;
+}
+
+.bear__text {
+  margin-block-end: 1rem;
+}
+
 /*
 * Footer
 */
@@ -217,12 +232,70 @@ TODO: Just temporary! I still have to change the image style, this might only be
 /*
 * Media queries
 */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
   html {
     font-size: 20px;
   }
   .welcome__flexbox {
     flex-direction: row;
+  }
+  /* New grid layout for bigger devices*/
+  .main__article {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+  }
+  .grid--part-1 {
+    grid-area: 1/6/3/9;
+    margin-top: -2.5em;
+  }
+  .grid--part-2 {
+    grid-area: 3/1/4/3;
+  }
+  .grid--part-3 {
+    grid-area: 4/1/7/10;
+    justify-self: center;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .grid--part-4 {
+    grid-area: 6/7/8/10;
+    margin-top: 3em;
+    margin-right: 1em;
+  }
+  .grid--part-5 {
+    grid-area: 8/2/11/4;
+    margin-top: 5em;
+  }
+  .grid--part-6 {
+    grid-area: 11/6/12/8;
+  }
+  .grid--part-7 {
+    grid-area: 12/1/14/3;
+  }
+  .grid--part-8 {
+    grid-area: 14/1/15/10;
+    justify-self: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+  .grid--part-9 {
+    grid-area: 15/5/17/8;
+    margin-top: 3em;
+    margin-bottom: -3em;
+  }
+  .section__golden-bear {
+    background-color: #000;
   }
 }
 
