@@ -255,9 +255,19 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 .animation-flex {
     padding: 9rem 0;
     background-image: url(../img/cc-circle-2.png);
-    background-position: Min(300px, calc(100vw - 300px))  -100px;
+    background-position: right -100px top -100px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: min(600px, 20rem);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+	from {
+        transform:rotate(0deg)
+    }
+	to {
+        transform:rotate(360deg)
+    }
 }
 
 /*
