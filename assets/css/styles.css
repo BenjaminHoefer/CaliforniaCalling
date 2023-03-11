@@ -226,6 +226,26 @@
   margin-block-end: 1rem;
 }
 
+.img--overlap {
+  position: relative;
+  z-index: 2;
+}
+
+.animation-flex {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.animation-flex__img {
+  position: absolute;
+  top: -6rem;
+  right: -6rem;
+  width: clamp(10rem, 10rem + 30vw, 100rem);
+}
+
 /*
 * Footer
 */
