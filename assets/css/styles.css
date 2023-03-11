@@ -226,24 +226,12 @@
   margin-block-end: 1rem;
 }
 
-.img--overlap {
-  position: relative;
-  z-index: 2;
-}
-
 .animation-flex {
-  display: flex;
-  justify-content: end;
-  align-items: start;
-  position: relative;
-  margin-bottom: 10rem;
-}
-
-.animation-flex__img {
-  position: absolute;
-  top: -6rem;
-  right: -6rem;
-  width: clamp(10rem, 10rem + 30vw, 100rem);
+  padding: 9rem 0;
+  background-image: url(../img/cc-circle-2.png);
+  background-position: min(300px, 100vw - 300px) -100px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /*
