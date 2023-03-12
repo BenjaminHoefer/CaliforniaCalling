@@ -226,21 +226,34 @@
   margin-block-end: 1rem;
 }
 
-.animation-flex {
-  padding: 9rem 0;
+.bear__figure {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  position: relative;
+  margin-bottom: 10rem;
+  /* overflow-x: hidden; */
+}
+
+.logo__container {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  translate: 30% -30%;
+  width: clamp(15rem, 15rem + 5vw, 30rem);
+  height: clamp(15rem, 15rem + 5vw, 30rem);
   background-image: url(../img/cc-circle-2.png);
-  background-position: right -100px top -100px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: min(600px, 20rem);
-  animation: spin 1s linear infinite;
+  animation: spin 10s linear infinite;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
   to {
-    transform: rotate(360deg);
+    transform: rotateZ(-360deg);
   }
 }
 /*
