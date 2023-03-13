@@ -170,6 +170,9 @@
   z-index: 1;
 }
 
+/* 
+! Map need to be fixed to be better responsive
+*/
 .intro__map {
   margin: -3rem 2rem 2rem 1rem;
   width: clamp(10rem, 10rem + 30vw, 100rem);
@@ -231,12 +234,14 @@
   z-index: 1;
 }
 
-.logo {
+.section__poppy-bear {
   position: relative;
-  margin-bottom: 10rem;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
+/* 
+! Image is supposed to change size but it doesn't. Need to be fixed.
+*/
 .logo__container {
   display: inline-block;
   position: absolute;
@@ -245,12 +250,14 @@
   translate: 30% -30%;
   width: clamp(15rem, 15rem + 5vw, 30rem);
   height: clamp(15rem, 15rem + 5vw, 30rem);
-  background-image: url(../img/cc-circle-2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   animation: spin 10s linear infinite;
 }
 
+.poppy-bear__article {
+  margin-top: 10rem;
+}
+
+/* Animations */
 @keyframes spin {
   to {
     transform: rotateZ(-360deg);
