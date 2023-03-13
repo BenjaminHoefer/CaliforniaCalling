@@ -58,6 +58,7 @@ $bright: #fff;
 */
 
 $text: clamp(.75rem, .5rem + 2vw, 1rem);
+$text--small: clamp(.5rem, .5rem + 1vw, 1rem);
 $headline: clamp(1rem, 2rem + 5vw, 6rem);
 $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 
@@ -93,6 +94,10 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     max-width: 18ch;
 }
 
+.headline--reg {
+    font-size: $text;
+}
+
 .text {
     font-family: "Work Sans";
     font-weight: 400;
@@ -105,9 +110,18 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     color: $bright;
 }
 
+.text__small {
+    font-size: $text--small;
+}
+
 .text--white-border {
     text-shadow: -1px 0 $bright, 0 1px $bright, 1px 0 $bright, 0 -1px $bright;
 }
+
+.text--black-border {
+    text-shadow: -1px 0 $dark, 0 1px $dark, 1px 0 $dark, 0 -1px $dark;
+}
+
 
 .text--grid {
     padding-inline-start: 1.25rem;
@@ -293,13 +307,46 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     }
 }
 
-
 /*
 * Footer
 */
 
+.body__footer {
+    padding-top: 4rem;
+}
+
 .footer {
     background-color: $dark;
+}
+
+.footer__container {
+    padding-left: 2rem;
+}
+
+.footer__animation {
+    width: 100%;
+    margin: 0;
+    background-color: $bright;
+}
+
+.footer__text {
+    margin: 0;
+    margin-block: 1rem;
+    max-width: 20rem;
+    margin-inline-end: 2rem;
+}
+
+.footer__btn  {
+    margin-block-end: 3rem;
+}
+
+.footer__logo {
+    width: clamp(1rem, 1rem + 2vw, 3rem);
+}
+
+.footer__logo--big {
+    width: clamp(5rem, 5rem + 2vw, 8rem);
+    margin: 2rem 0;
 }
 
 /*
