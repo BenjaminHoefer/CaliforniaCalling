@@ -18,7 +18,7 @@
   src: url("../fonts/work-sans-v18-latin-900.woff2") format("woff2"), url("../fonts/work-sans-v18-latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* lora-regular - latin */
-@font-face {
+@font-face {b
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Lora";
   font-style: normal;
@@ -226,6 +226,7 @@
   background-color: #fff;
   position: relative;
   overflow-x: hidden;
+  z-index: 2;
 }
 
 .main__section {
@@ -304,6 +305,10 @@
 }
 .marquee__animation:hover {
   animation-play-state: paused;
+}
+
+.footer {
+  position: relative;
 }
 
 .footer__text {
@@ -445,6 +450,19 @@
   .bear__figure--poppy-right {
     margin-right: 2rem;
     margin-bottom: 2rem;
+  }
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+  .marquee {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: 20%;
   }
 }
 

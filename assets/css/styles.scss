@@ -255,6 +255,7 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     background-color: $bright;
     position: relative;
     overflow-x: hidden;
+    z-index: 2;
 }
 
 .main__section {
@@ -336,6 +337,10 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     &:hover {
         animation-play-state: paused;
     }
+}
+
+.footer {
+    position: relative;
 }
 
 .footer__text {
@@ -502,5 +507,14 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     .bear__figure--poppy-right {
         margin-right: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .marquee {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        translate: 20%;
+        overflow: hidden;
     }
 }
