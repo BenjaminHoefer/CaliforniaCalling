@@ -22,7 +22,7 @@
             </div>
         </section>
         <section class="header__intro intro">
-            <h2 class="header__headline headline headline--small text--white intro__headline">Last year, nearly 2 million acres were devastated by the deadliest, most destructive wildfires in California history.</h2>
+            <h2 class="header__headline headline headline--small headline--fixed text--white intro__headline">Last year, nearly 2 million acres were devastated by the deadliest, most destructive wildfires in California history.</h2>
             <figure class="intro__map">
                 <img src="./assets/img/map.svg" alt="The gray sketched map of California.">
             </figure>
@@ -67,41 +67,58 @@
                 <img class="img" width="2352" height="1568" src="./assets/img/action7.jpeg" alt="Three men working on the t-shirts inside a workshop.">
             </figure>
         </section>
-        <section class="section__golden-bear bear bear__grid">
-            <article class="main__section">
-                <p class="bear__text text text--white">001</p>
-                <h2 class="bear__headline headline text--white">The Golden Bear</h2>
-                <p class="headline headline--reg bear__text text--white">This design is all about the resilience of California to overcome difficult situations and come out stronger than before. It’s a flip of the UNC Tarheel mascot with added elements like the California poppy.</p>
-                <p class="text text--white">— Kevin Lam, Artist</p>
+        <section class="section__golden-bear bear">
+            <article class="main__section bear__flex">
+                <div>
+                    <p class="bear__text text text--white">001</p>
+                    <h2 class="bear__headline headline headline--small text--white">The Golden Bear</h2>
+                </div>
+                <div>
+                    <p class="headline headline--reg bear__text text--white">This design is all about the resilience of California to overcome difficult situations and come out stronger than before. It’s a flip of the UNC Tarheel mascot with added elements like the California poppy.</p>
+                    <p class="text text--white text--small">— Kevin Lam, Artist</p>
+                </div>
             </article>
-            <figure class="bear__figure">
-                <img class="img" width="1880" height="1880" src="./assets/img/goldenbear.png" alt="A sketched grumpy looking bear holding a flower inside his right hand.">
-            </figure>
-            <figure class="bear__figure">
-                <img class="img" width="972" height="1256" src="./assets/img/gb2.png" alt="A bunch of sticker with the face of the grumpy looking bear on it.">
-            </figure>
+            <div class="bear__flex">
+                <figure class="bear__figure bear__figure--golden-left">
+                    <img class="img" width="1880" height="1880" src="./assets/img/goldenbear.png" alt="A sketched grumpy looking bear holding a flower inside his right hand.">
+                </figure>
+                <figure class="bear__figure bear__figure--golden-right">
+                    <img class="img" width="972" height="1256" src="./assets/img/gb2.png" alt="A bunch of sticker with the face of the grumpy looking bear on it.">
+                </figure>
+            </div>
         </section>
-        <section class="section__poppy-bear bear bear__grid poppy-bear">
+        <section class="section__poppy-bear bear">
             <div class="logo">
                 <img class="logo__container img" width="1080" height="1080" src="./assets/img/cc-circle-2.png" alt="">
             </div>
-            <article class="main__section poppy-bear__article">
-                <p class="bear__text text">002</p>
-                <h2 class="bear__headline headline">The Poppy Bear</h2>
-                <p class="headline headline--reg bear__text">This design is inspired by the quote ‘grow through what you go through’ and represents the strength of Californians and how we will continue to thrive, regardless of what knocks us down.</p>
-                <p class="bear__text text">— Alyssa Wigant, Artist</p>
+            <article class="main__section poppy-bear__article bear__flex">
+                <div>
+                    <p class="bear__text text">002</p>
+                    <h2 class="bear__headline headline headline--small">The Poppy Bear</h2>
+                </div>
+                <div>
+                    <p class="headline headline--reg bear__text">This design is inspired by the quote ‘grow through what you go through’ and represents the strength of Californians and how we will continue to thrive, regardless of what knocks us down.</p>
+                    <p class="bear__text text">— Alyssa Wigant, Artist</p>
+                </div>
             </article>
-            <figure class="bear__figure">
-                <img class="img" width="972" height="1256" src="./assets/img/pb3.png" alt="A woman on a black background holding a poster in front of her showing a black sketchy bear surrounded by flowers.">
-            </figure>
-            <figure class="bear__figure">
-                <img class="img" width="1880" height="1880" src="./assets/img/rosebear.png" alt="A detailed picture of the black sketchy bear surrounded by white flowers on a black background.">
-            </figure>
+            <div class="bear__flex">
+                <figure class="bear__figure bear__figure--poppy-left">
+                    <img class="img" width="972" height="1256" src="./assets/img/pb3.png" alt="A woman on a black background holding a poster in front of her showing a black sketchy bear surrounded by flowers.">
+                </figure>
+                <figure class="bear__figure bear__figure--poppy-right">
+                    <img class="img" width="1880" height="1880" src="./assets/img/rosebear.png" alt="A detailed picture of the black sketchy bear surrounded by white flowers on a black background.">
+                </figure>
+            </div>
         </section>
     </main>
     <footer class="footer body__footer">
         <div class="marquee">
             <ul class="marquee__content marquee__animation">
+                <li class="headline--small"><span class="text--black-border text--white">2019 </span>JUNE 21,</li>
+                <li class="headline--small"><span class="text--black-border text--white">2019 </span>JUNE 21,</li>
+                <li class="headline--small"><span class="text--black-border text--white">2019 </span>JUNE 21,</li>
+            </ul>
+            <ul class="marquee__content marquee__animation" aria-hidden="true">
                 <li class="headline--small"><span class="text--black-border text--white">2019 </span>JUNE 21,</li>
                 <li class="headline--small"><span class="text--black-border text--white">2019 </span>JUNE 21,</li>
                 <li class="headline--small"><span class="text--black-border text--white">2019 </span>JUNE 21,</li>
@@ -116,8 +133,8 @@
                 <img class="img footer__logo" width="56" height="56" src="./assets/img/ig.png" alt="The Instagram logo">
                 <img class="img footer__logo" width="66" height="56" src="./assets/img/li.png" alt="The Linked In logo">
             </div>
-            <p class="text text--white text__small">A SF Design Week project</p>
-            <p class="text text--white text__small">2019</p>
+            <p class="text text--white text--small">A SF Design Week project</p>
+            <p class="text text--white text--small">2019</p>
             <div>
                 <img class="img footer__logo footer__logo--big" width="184" height="104" src="./assets/img/sfdw-logo.png" alt="Text which means 'San Francisco Design Week' representing a logo">
                 <img class="img footer__logo footer__logo--big" width="266" height="82" src="./assets/img/ngo-logo.png" alt="The logo of the American Red Cross">

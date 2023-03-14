@@ -91,6 +91,9 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 .headline--small {
     margin-inline-start: .5rem;
     font-size: $headline--small;
+}
+
+.headline--fixed {
     max-width: 18ch;
 }
 
@@ -110,7 +113,7 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     color: $bright;
 }
 
-.text__small {
+.text--small {
     font-size: $text--small;
 }
 
@@ -250,16 +253,14 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 
 .section__poppy-bear {
     background-color: $bright;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .main__section {
-    padding-block-start: 5rem;
+    padding-block-start: 8rem;
     margin-block-end: 3rem;
     margin-inline: 1rem
-}
-
-.bear__grid {
-    display: grid;
 }
 
 .bear__headline {
@@ -273,11 +274,6 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 .bear__figure {
     position: relative;
     z-index: 1;
-}
-
-.section__poppy-bear {
-    position: relative;
-    overflow-x: hidden;
 }
 
 /* 
@@ -312,6 +308,7 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 }
 
 .footer__container {
+    margin-top: 4rem;
     padding-left: 2rem;
 }
 
@@ -464,5 +461,46 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
         grid-area: 15 / 5 / 17 / 8;
         margin-top: 3em;
         margin-bottom: -3em;
+    }
+
+    .bear__flex {
+        display: flex;
+    }
+
+    .bear__headline {
+        max-width: 15rem;
+        line-height: 1;
+    }
+
+    .bear__text {
+        max-width: 18rem;
+    }
+
+    .bear__figure--golden-left {
+        align-self: flex-end;
+        margin-bottom: -3rem;
+        margin-left: 2rem;
+    }
+
+    .bear__figure--golden-right {
+        position: relative;
+        z-index: 2;
+        align-self: flex-end;
+        margin-bottom: -2rem;
+        margin-left: -2rem;
+        margin-right: 2rem;
+    }
+
+    .bear__figure--poppy-left {
+        position: relative;
+        z-index: 2;
+        align-self: center;
+        margin-left: 2rem;
+        margin-right: -3rem;
+    }
+
+    .bear__figure--poppy-right {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
     }
 }
