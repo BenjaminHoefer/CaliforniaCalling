@@ -218,7 +218,7 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 
 .intro__map {
     margin: -3rem 2rem 2rem 1rem;
-    width: clamp(10rem, 10rem + 30vw, 100rem);
+    width: clamp(10rem, 10rem + 20vw, 60rem);
     justify-self: end;
 }
 
@@ -255,11 +255,10 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     background-color: $bright;
     position: relative;
     overflow-x: hidden;
-    z-index: 2;
 }
 
 .main__section {
-    padding-block-start: 8rem;
+    padding-block-start: 15rem;
     margin-block-end: 3rem;
     margin-inline: 1rem
 }
@@ -277,23 +276,14 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     z-index: 1;
 }
 
-/* 
-! Image is supposed to change size but it doesn't. Need to be fixed.
-*/
-
 .logo__container {
     display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
     translate: 30% -30%;;
-    width: clamp(15rem, 15rem + 5vw, 30rem);
-    height: clamp(15rem, 15rem + 5vw, 30rem);
+    width: clamp(10rem, 15rem + 10vw, 30rem);
     animation: spin 10s linear infinite;
-}
-
-.poppy-bear__article {
-    margin-top: 10rem;
 }
 
 /*
@@ -395,10 +385,6 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
 /* Change the direction of flexbox to adopt a new layout on bigger devices and increase font-size for responsiveness */
 
 @media only screen and (min-width: 650px) {
-    html {
-        font-size: 20px;
-    }
-
     .welcome__flexbox {
         flex-direction: row;
     }
@@ -488,8 +474,6 @@ $headline--small: clamp(2rem, 2rem + 1.75vw, 6rem);
     }
 
     .bear__figure--golden-right {
-        position: relative;
-        z-index: 2;
         align-self: flex-end;
         margin-bottom: -2rem;
         margin-left: -2rem;

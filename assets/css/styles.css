@@ -18,7 +18,7 @@
   src: url("../fonts/work-sans-v18-latin-900.woff2") format("woff2"), url("../fonts/work-sans-v18-latin-900.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* lora-regular - latin */
-@font-face {b
+@font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Lora";
   font-style: normal;
@@ -190,7 +190,7 @@
 */
 .intro__map {
   margin: -3rem 2rem 2rem 1rem;
-  width: clamp(10rem, 10rem + 30vw, 100rem);
+  width: clamp(10rem, 10rem + 20vw, 60rem);
   justify-self: end;
 }
 
@@ -226,11 +226,10 @@
   background-color: #fff;
   position: relative;
   overflow-x: hidden;
-  z-index: 2;
 }
 
 .main__section {
-  padding-block-start: 8rem;
+  padding-block-start: 15rem;
   margin-block-end: 3rem;
   margin-inline: 1rem;
 }
@@ -248,22 +247,14 @@
   z-index: 1;
 }
 
-/* 
-! Image is supposed to change size but it doesn't. Need to be fixed.
-*/
 .logo__container {
   display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
   translate: 30% -30%;
-  width: clamp(15rem, 15rem + 5vw, 30rem);
-  height: clamp(15rem, 15rem + 5vw, 30rem);
+  width: clamp(10rem, 15rem + 10vw, 30rem);
   animation: spin 10s linear infinite;
-}
-
-.poppy-bear__article {
-  margin-top: 10rem;
 }
 
 /*
@@ -356,9 +347,6 @@
 }
 /* Change the direction of flexbox to adopt a new layout on bigger devices and increase font-size for responsiveness */
 @media only screen and (min-width: 650px) {
-  html {
-    font-size: 20px;
-  }
   .welcome__flexbox {
     flex-direction: row;
   }
@@ -433,8 +421,6 @@
     margin-left: 2rem;
   }
   .bear__figure--golden-right {
-    position: relative;
-    z-index: 2;
     align-self: flex-end;
     margin-bottom: -2rem;
     margin-left: -2rem;
@@ -451,18 +437,13 @@
     margin-right: 2rem;
     margin-bottom: 2rem;
   }
-
-.footer {
-  position: relative;
-  overflow: hidden;
-}
-
   .marquee {
     transform: rotate(45deg);
     position: absolute;
     top: 0;
     right: 0;
     translate: 20%;
+    overflow: hidden;
   }
 }
 
